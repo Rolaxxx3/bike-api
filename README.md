@@ -10,7 +10,13 @@
 
 ### How to use it as docker container
 
-*
+* You should add container rolaxxx3/bike-api:tagname to your docker-compose file
+
+#### Avaible environment
+
+* NODE_ENV
+* PORT
+* MONGODB_URI
 
 #### Requirements
 
