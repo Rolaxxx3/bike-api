@@ -1,5 +1,4 @@
 const express = require('express');
-const { compile } = require('morgan');
 const router = express.Router();
 const Bike = require('../models/Bike');
 const ObjectIdValidator = new RegExp("^[0-9a-fA-F]{24}$");
