@@ -6,7 +6,12 @@ const BikeSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    type: Number,
+    type: {
+        type: Number,
+        required: true,
+        min: 0,
+        max: 7,
+    },
     rent: {
         price: {
             type: Number,
