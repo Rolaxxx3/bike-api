@@ -6,7 +6,7 @@ const BikeSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    type: {
+    bike_type: {
         type: Number,
         required: true,
         min: 0,

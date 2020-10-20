@@ -46,11 +46,11 @@ router.delete('/:id', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    const { name, type,  rent } = req.body;
+    const { name, bike_type,  rent } = req.body;
     const { price, end_date, start_date } = rent;
     const bike = new Bike({
       name,
-      type,
+      bike_type,
       rent: {
         price: price || 0,
         end_date: Date(end_date) || Date.now(),
@@ -72,13 +72,13 @@ router.patch('/:id', async (req, res, next) => {
       errorHandler(res, "Invalid bike id", 400);
       next();
     }
-    const { name, type,  rent = {} } = req.body;
+    const { name, bike_type,  rent = {} } = req.body;
     const { price, end_date, start_date } = rent;
     const bike = await Bike.findById(req.params.id).exec();
     if (bike) {
       await bike.updateOne({
         name: name || bike.name,
-        type: type || bike.type,
+        bike_type: bike_type || bike.bike_type,
         rent: {
           price: price || bike.rent.price,
           end_date: end_date || bike.rent.end_date,
