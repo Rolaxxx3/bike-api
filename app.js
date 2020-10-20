@@ -14,12 +14,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
+    res.header("Access-Control-Allow-Headers", "*");
     if (req.method === 'OPTIONS') {
-        res.header('Access-Control-Allow-Methods', 'PATCH GET POST DELETE');
+        res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PATCH');
         return res.status(200).json({});
     }
     next();
