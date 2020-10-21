@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { ObjectId } = require('mongodb');
 
 const BikeSchema = new mongoose.Schema({
     name: {
@@ -11,6 +12,10 @@ const BikeSchema = new mongoose.Schema({
         required: true,
         min: 0,
         max: 7,
+    },
+    _id: {
+        type: ObjectId,
+        required: true,
     },
     rent: {
         price: {
