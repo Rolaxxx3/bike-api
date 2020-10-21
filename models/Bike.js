@@ -16,6 +16,7 @@ const BikeSchema = new mongoose.Schema({
     _id: {
         type: ObjectId,
         required: true,
+        unique : true,
     },
     rent: {
         price: {
