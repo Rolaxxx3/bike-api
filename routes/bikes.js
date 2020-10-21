@@ -93,7 +93,6 @@ router.patch('/:id', async (req, res, next) => {
       next();
     }
   } catch (e) {
-    console.log(e.message);
     errorHandler(res, "Something went wrong", 500)
     next();
   }

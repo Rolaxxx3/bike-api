@@ -22,6 +22,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/bikes', bikeRouter);
+app.use('/_api/bikes', bikeRouter);
 
 module.exports = app;

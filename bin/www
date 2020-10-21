@@ -38,6 +38,7 @@ server.listen(port, () => {
     config.MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useCreateIndex: true,
     })
     .then(async () => {
       console.log("Database is connected");
