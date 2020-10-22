@@ -10,7 +10,7 @@
 
 ### How to use it as docker container
 
-* You should add container rolaxxx3/bike-api:tagname to your docker-compose file
+* You should add container rolaxxx3/bike-api:latest to your docker-compose file
 
 #### Avaible environment
 
